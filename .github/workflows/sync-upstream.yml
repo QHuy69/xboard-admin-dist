@@ -1,0 +1,42 @@
+name: Sync official admin assets
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 2 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-custom-en
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the customized branch
+        uses: actions/checkout@v4
+        with:
+          ref: custom-en
+          fetch-depth: 0
+
+      - name: Merge the official release
+        run: |
+          git remote add upstream https://github.com/cedar2025/xboard-admin-dist.git 2>/dev/null || true
+          git fetch upstream main
+          git merge --no-edit upstream/main
+
+      - name: Reapply and verify English customization
+        run: python3 scripts/apply_admin_en_customizations.py
+
+      - name: Commit and publish the customized update
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet; then
+            git add assets locales
+            git commit -m "chore(i18n): reapply English admin customization"
+          fi
+          git push origin HEAD:custom-en

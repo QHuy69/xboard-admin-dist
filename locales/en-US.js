@@ -758,7 +758,8 @@ window.XBOARD_TRANSLATIONS['en-US'] = {
     "userManagement": "User Management",
     "trafficResetLogs": "Traffic Reset Logs",
     "ticketManagement": "Ticket Management",
-    "pluginApps": "Plugin Apps"
+    "pluginApps": "Plugin Apps",
+    "pluginMenuDemo": "Plugin Menu (Demo)"
   },
   "subscribe": {
     "plan": {
@@ -946,7 +947,11 @@ window.XBOARD_TRANSLATIONS['en-US'] = {
         "description": "The WebSocket address nodes use to connect to the panel. Leave empty to use the site URL.",
         "placeholder": "Leave empty to use site URL"
       },
-      "saving": "Saving..."
+      "saving": "Saving...",
+      "manage": {
+        "title": "Node Management",
+        "description": "Manage all nodes, including adding, deleting, and editing."
+      }
     },
     "invite": {
       "title": "Invitation & Commission Settings",
@@ -1890,7 +1895,15 @@ window.XBOARD_TRANSLATIONS['en-US'] = {
           "title": "Metrics",
           "uptime": "Uptime",
           "conns": "Connections",
-          "speed": "Speed"
+          "speed": "Speed",
+          "api": "API Status",
+          "kernel": "Kernel Status",
+          "gc": "GC Pause",
+          "limit": "Rate-Limited Users",
+          "ws": "WebSocket",
+          "goroutines": "Concurrent Goroutines",
+          "load": "System Load",
+          "users": "Online Users"
         }
       },
       "customId": "Custom ID",
@@ -2096,7 +2109,15 @@ window.XBOARD_TRANSLATIONS['en-US'] = {
       },
       "submit": "Submit",
       "cancel": "Cancel",
-      "success": "Submitted successfully"
+      "success": "Submitted successfully",
+      "listen_address": {
+        "label": "Listen Address",
+        "placeholder": "Leave empty for the default (0.0.0.0), or enter 127.0.0.1, ::1, etc.",
+        "description": "Specify the IP address the server listens on. Leave empty for the default (0.0.0.0) to listen on all interfaces. You can set 127.0.0.1 for local-only access or a specific IP address.",
+        "show": "Show Listen Address",
+        "hide": "Hide Listen Address",
+        "optional": "Optional"
+      }
     },
     "dynamic_form": {
       "multiplex": {
@@ -2545,6 +2566,38 @@ window.XBOARD_TRANSLATIONS['en-US'] = {
         "tls_tab": "TLS",
         "route_tab": "Routing",
         "multiplex_tab": "Multiplex"
+      },
+      "cert_config": {
+        "tab": "TLS Certificate",
+        "cert_mode": {
+          "label": "Certificate Mode",
+          "description": "Choose how to obtain the certificate; support depends on the backend node.",
+          "none_desc": "TLS certificate configuration is disabled"
+        },
+        "domain": {
+          "label": "Certificate Domain"
+        },
+        "email": {
+          "label": "Notification Email"
+        },
+        "http_port": {
+          "label": "Challenge Port",
+          "description": "ACME challenge port (default 80)"
+        },
+        "dns_provider": {
+          "label": "DNS Provider",
+          "doc_link": "View DNS provider configuration guide"
+        },
+        "dns_env": {
+          "label": "Environment Variables (API Keys)",
+          "description_short": "One KEY=VALUE entry per line"
+        },
+        "cert_content": {
+          "label": "Certificate Content (Public Key)"
+        },
+        "key_content": {
+          "label": "Key Content (Private Key)"
+        }
       }
     },
     "network_settings": {
@@ -2555,11 +2608,13 @@ window.XBOARD_TRANSLATIONS['en-US'] = {
       "json_config_placeholder_with_template": "Please enter JSON configuration or select template above",
       "validation": {
         "must_be_object": "Configuration must be a JSON object",
-        "invalid_json": "Invalid JSON format"
+        "invalid_json": "Invalid JSON format",
+        "must_be_array": "Configuration must be a JSON array"
       },
       "errors": {
         "save_failed": "Error occurred while saving"
-      }
+      },
+      "edit_padding_scheme": "Edit Padding Scheme"
     },
     "common": {
       "cancel": "Cancel",
@@ -3116,7 +3171,8 @@ window.XBOARD_TRANSLATIONS['en-US'] = {
     "orderManagement": "Order Management",
     "couponManagement": "Coupon Management",
     "userManagement": "User Management",
-    "ticketManagement": "Ticket Management"
+    "ticketManagement": "Ticket Management",
+    "pluginManagement": "Plugin Management"
   },
   "plugin": {
     "title": "Plugin Management",
@@ -3500,5 +3556,4 @@ window.XBOARD_TRANSLATIONS['en-US'] = {
       "save": "Save",
       "success": "Settings saved successfully"
     }
-  }
-};
+  },\n  "nav.pluginMenuDemo": "Plugin Menu (Demo)",\n  "settings.server.manage.title": "Node Management",\n  "settings.server.manage.description": "Manage all nodes, including adding, deleting, and editing.",\n  "server.columns.loadStatus.metrics.api": "API Status",\n  "server.columns.loadStatus.metrics.kernel": "Kernel Status",\n  "server.columns.loadStatus.metrics.gc": "GC Pause",\n  "server.columns.loadStatus.metrics.limit": "Rate-Limited Users",\n  "server.columns.loadStatus.metrics.ws": "WebSocket",\n  "server.columns.loadStatus.metrics.goroutines": "Concurrent Goroutines",\n  "server.columns.loadStatus.metrics.load": "System Load",\n  "server.columns.loadStatus.metrics.users": "Online Users",\n  "server.form.listen_address.label": "Listen Address",\n  "server.form.listen_address.placeholder": "Leave empty for the default (0.0.0.0), or enter 127.0.0.1, ::1, etc.",\n  "server.form.listen_address.description": "Specify the IP address the server listens on. Leave empty for the default (0.0.0.0) to listen on all interfaces. You can set 127.0.0.1 for local-only access or a specific IP address.",\n  "server.form.listen_address.show": "Show Listen Address",\n  "server.form.listen_address.hide": "Hide Listen Address",\n  "server.form.listen_address.optional": "Optional",\n  "server.dynamic_form.cert_config.tab": "TLS Certificate",\n  "server.dynamic_form.cert_config.cert_mode.label": "Certificate Mode",\n  "server.dynamic_form.cert_config.cert_mode.description": "Choose how to obtain the certificate; support depends on the backend node.",\n  "server.dynamic_form.cert_config.cert_mode.none_desc": "TLS certificate configuration is disabled",\n  "server.dynamic_form.cert_config.domain.label": "Certificate Domain",\n  "server.dynamic_form.cert_config.email.label": "Notification Email",\n  "server.dynamic_form.cert_config.http_port.label": "Challenge Port",\n  "server.dynamic_form.cert_config.http_port.description": "ACME challenge port (default 80)",\n  "server.dynamic_form.cert_config.dns_provider.label": "DNS Provider",\n  "server.dynamic_form.cert_config.dns_provider.doc_link": "View DNS provider configuration guide",\n  "server.dynamic_form.cert_config.dns_env.label": "Environment Variables (API Keys)",\n  "server.dynamic_form.cert_config.dns_env.description_short": "One KEY=VALUE entry per line",\n  "server.dynamic_form.cert_config.cert_content.label": "Certificate Content (Public Key)",\n  "server.dynamic_form.cert_config.key_content.label": "Key Content (Private Key)",\n  "server.network_settings.edit_padding_scheme": "Edit Padding Scheme",\n  "server.network_settings.validation.must_be_array": "Configuration must be a JSON array",\n  "sidebar.pluginManagement": "Plugin Management",\n};
