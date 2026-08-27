@@ -36,10 +36,17 @@ jobs:
       - name: Reapply and verify English customization
         run: python3 scripts/apply_admin_en_customizations.py
 
+      - name: Reapply and verify Vietnamese customization
+        run: |
+          python3 -m pip install --disable-pip-version-check requests
+          python3 scripts/generate_admin_vi_locale.py
+          python3 scripts/apply_admin_vi_integration.py
+          node --check locales/vi-VN-v3.js
+
       - name: Commit and publish the customized update
         run: |
           if ! git diff --quiet; then
-            git add assets locales
-            git commit -m "chore(i18n): reapply English admin customization"
+            git add assets locales scripts index.html .gitignore
+            git commit -m "chore(i18n): reapply admin translations"
           fi
           git push origin HEAD:custom-en

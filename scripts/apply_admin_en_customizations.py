@@ -242,15 +242,21 @@ def flatten_keys(path: Path) -> set[str]:
 def update_locale() -> None:
     path = LOCALE_DIR / "en-US.js"
     source = path.read_text(encoding="utf-8")
+    # Older revisions accidentally wrote the two characters ``\\n`` between
+    # generated properties, which makes the locale file invalid JavaScript.
+    # Repair only generated property boundaries; escaped newlines inside
+    # translation values must remain untouched.
+    source = source.replace(',\\n  "', ',\n  "')
+    source = source.replace(",\\n};", ",\n};")
     existing = parse_locale(path)
     additions = [(key, value) for key, value in LOCALE_ADDITIONS.items() if key not in existing]
     if additions:
         closing = source.rfind("}")
         if closing < 0:
             raise RuntimeError(f"Cannot find the end of {path}")
-        lines = "".join(f'  "{key}": "{value}",\\n' for key, value in additions)
-        source = source[:closing].rstrip() + ",\\n" + lines + source[closing:]
-        path.write_text(source, encoding="utf-8")
+        lines = "".join(f'  "{key}": "{value}",\n' for key, value in additions)
+        source = source[:closing].rstrip() + ",\n" + lines + source[closing:]
+    path.write_text(source, encoding="utf-8")
 
     missing = flatten_keys(LOCALE_DIR / "zh-CN.js") - flatten_keys(path)
     if missing:
