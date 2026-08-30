@@ -3201,14 +3201,14 @@ window.XBOARD_TRANSLATIONS['vi-VN'] = {
       "available": "Có sẵn"
     },
     "button": {
-      "install": "cài đặt",
+      "install": "Cài đặt",
       "upgrade": "Nâng cấp",
       "config": "Cấu hình",
       "enable": "Kích hoạt",
       "disable": "Vô hiệu hóa",
       "uninstall": "Gỡ cài đặt",
       "readme": "Xem tài liệu",
-      "menuDemo": "Trình diễn thực đơn"
+      "menuDemo": "Xem thử menu"
     },
     "upload": {
       "button": "Tải lên plugin",
@@ -3241,12 +3241,13 @@ window.XBOARD_TRANSLATIONS['vi-VN'] = {
       "title": "Cấu hình",
       "description": "Sửa đổi cấu hình plugin",
       "save": "Lưu",
+      "saving": "Đang lưu...",
       "cancel": "Hủy"
     },
     "readme": {
       "title": "Tài liệu bổ trợ"
     },
-    "author": "tác giả",
+    "author": "Tác giả",
     "messages": {
       "installSuccess": "Đã cài đặt plugin thành công",
       "installError": "Không cài đặt được plugin",
