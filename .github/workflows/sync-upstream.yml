@@ -43,6 +43,11 @@ jobs:
           python3 scripts/apply_admin_vi_integration.py
           node --check locales/vi-VN-v3.js
 
+      - name: Verify admin icon visibility invariants
+        run: |
+          python3 scripts/apply_admin_icon_visibility.py
+          python3 scripts/check_admin_icon_visibility.py
+
       - name: Commit and publish the customized update
         run: |
           if ! git diff --quiet; then
