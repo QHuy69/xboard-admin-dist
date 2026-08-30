@@ -512,6 +512,7 @@ window.XBOARD_TRANSLATIONS['vi-VN'] = {
         "expire_time_confirm": "Xác nhận",
         "subscription": "Gói đăng ký",
         "subscription_none": "không có",
+        "language": "Ngôn ngữ tài khoản",
         "account_status": "Trạng thái tài khoản",
         "commission_type": "Loại hoa hồng",
         "commission_type_system": "Theo dõi cài đặt hệ thống",
@@ -1213,8 +1214,8 @@ window.XBOARD_TRANSLATIONS['vi-VN'] = {
         }
       },
       "surplus_enable": {
-        "title": "Kích hoạt gói khấu trừ",
-        "description": "Khi kích hoạt, hệ thống sẽ trừ vào thuê bao ban đầu khi người dùng thay đổi thuê bao, tham khảo tài liệu để biết chi tiết."
+        "title": "Khấu trừ gói cũ khi đổi gói",
+        "description": "Khi bật, giá trị còn lại của gói cũ sẽ được trừ vào giá gói mới. Tắt để không tự tạo khoản khấu trừ hoặc số dư khi đổi gói."
       },
       "new_order_event": {
         "title": "Sự kiện kích hoạt khi đăng ký mới",

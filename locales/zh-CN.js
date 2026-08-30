@@ -512,6 +512,7 @@ window.XBOARD_TRANSLATIONS['zh-CN'] = {
         "expire_time_confirm": "确定",
         "subscription": "订阅计划",
         "subscription_none": "无",
+        "language": "账户语言",
         "account_status": "账户状态",
         "commission_type": "佣金类型",
         "commission_type_system": "跟随系统设置",

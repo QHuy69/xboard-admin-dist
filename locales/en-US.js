@@ -512,6 +512,7 @@ window.XBOARD_TRANSLATIONS['en-US'] = {
         "expire_time_confirm": "Confirm",
         "subscription": "Subscription Plan",
         "subscription_none": "None",
+        "language": "Account language",
         "account_status": "Account Status",
         "commission_type": "Commission Type",
         "commission_type_system": "Follow System Settings",

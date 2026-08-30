@@ -454,6 +454,7 @@ window.XBOARD_TRANSLATIONS['ru-RU'] = {
         "expire_time_confirm": "Подтвердить",
         "subscription": "Тарифный план",
         "subscription_none": "Нет",
+        "language": "Язык аккаунта",
         "account_status": "Статус аккаунта",
         "commission_type": "Тип комиссии",
         "commission_type_system": "По системным настройкам",
