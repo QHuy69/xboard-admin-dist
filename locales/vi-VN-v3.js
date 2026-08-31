@@ -528,6 +528,7 @@ window.XBOARD_TRANSLATIONS['vi-VN'] = {
         "device_limit_placeholder": "Để trống vì không giới hạn thiết bị",
         "is_admin": "Là quản trị viên",
         "is_staff": "là nhân viên",
+        "is_reseller": "Là cộng tác viên",
         "remarks": "Bình luận",
         "remarks_placeholder": "Vui lòng nhập nhận xét vào đây",
         "cancel": "Hủy",

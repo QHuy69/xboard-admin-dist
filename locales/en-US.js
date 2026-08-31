@@ -528,6 +528,7 @@ window.XBOARD_TRANSLATIONS['en-US'] = {
         "device_limit_placeholder": "Leave empty for no device limit",
         "is_admin": "Is Admin",
         "is_staff": "Is Staff",
+        "is_reseller": "Is Reseller",
         "remarks": "Remarks",
         "remarks_placeholder": "Please enter remarks here",
         "cancel": "Cancel",

@@ -470,6 +470,7 @@ window.XBOARD_TRANSLATIONS['ru-RU'] = {
         "device_limit_placeholder": "Оставьте пустым для безлимита",
         "is_admin": "Админ",
         "is_staff": "Персонал",
+        "is_reseller": "Партнёр",
         "remarks": "Примечания",
         "remarks_placeholder": "Введите примечания здесь",
         "cancel": "Отмена",

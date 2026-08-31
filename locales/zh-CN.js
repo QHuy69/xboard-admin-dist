@@ -528,6 +528,7 @@ window.XBOARD_TRANSLATIONS['zh-CN'] = {
         "device_limit_placeholder": "留空则不限制",
         "is_admin": "是否管理员",
         "is_staff": "是否员工",
+        "is_reseller": "是否合作伙伴",
         "remarks": "备注",
         "remarks_placeholder": "请在这里记录",
         "cancel": "取消",
